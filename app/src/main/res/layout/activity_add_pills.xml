@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/constraintLayout"
     tools:context=".AddPillsActivity">
 
     <TextView
         android:id="@+id/header_addpills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/add_pill"
         android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.02" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/backAddPillsButton"
@@ -26,7 +27,6 @@
         android:clickable="true"
         android:contentDescription="@string/add_pill"
         android:focusable="true"
-        android:onClick="backAddPillsActivity"
         android:visibility="visible"
         app:backgroundTint="@color/main"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,5 +38,74 @@
         app:srcCompat="@drawable/baseline_arrow_back_ios_new_24"
         app:tint="@color/white"
         tools:visibility="visible" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pillsName"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/pill_name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/header_addpills"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/header_addpills"
+        app:layout_constraintTop_toBottomOf="@+id/header_addpills" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dose"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/dose"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/pillsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/pillsName"
+        app:layout_constraintTop_toBottomOf="@+id/pillsName" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/howManyTimes"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/time_to_take"
+        android:inputType="datetime|time"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/dose"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/dose"
+        app:layout_constraintTop_toBottomOf="@+id/dose" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="@string/add_pill"
+        android:focusable="true"
+        android:visibility="visible"
+        app:backgroundTint="@color/main"
+        app:fabCustomSize="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/howManyTimes"
+        app:layout_constraintStart_toEndOf="@+id/howManyTimes"
+        app:layout_constraintTop_toTopOf="@+id/howManyTimes"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@color/white"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/save_button"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/howManyTimes"
+        app:layout_constraintStart_toStartOf="@+id/howManyTimes"
+        app:layout_constraintTop_toBottomOf="@+id/howManyTimes" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

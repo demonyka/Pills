@@ -3,4 +3,8 @@
     <string name="add_pill">Добавить препарат</string>
     <string name="main">Главная</string>
     <string name="close">Закрыть</string>
+    <string name="pill_name">Название препарата</string>
+    <string name="time_to_take">Время приема</string>
+    <string name="dose">Дозировка</string>
+    <string name="save_button">Сохранить</string>
 </resources>
